@@ -1,7 +1,18 @@
 ---
+# NOTE: The frontmatter annotation must be included in this file.
 ---
 @charset "utf-8";
 
 // Use Bourbon and Neat for simplifying CSS boilerplate
 @import "bourbon/bourbon";
 @import "neat/neat";
+
+// Variables
+$modular-scale-ratio: $perfect-fifth;
+$modular-scale-base: 16px;
+$gutter: modular-scale(1, $modular-scale-base, $modular-scale-ratio);
+
+// Modules, following the SMACSS paradigm
+@import "modules/body";
+@import "modules/grid";
+@import "modules/typography";
